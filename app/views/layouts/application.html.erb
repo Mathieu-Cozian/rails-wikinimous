@@ -8,9 +8,22 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
   </head>
 
   <body>
+  <nav class="navbar">
+    <div class="container-fluid">
+        <div>
+          <%= link_to "Wikinimus", articles_path, class: "nav-item" %>
+        </div>
+          <div>
+          <%= link_to "Add an Article", new_article_path,  class: "nav-item" %>
+          </div>
+      </div>
+    </div>
+</nav>
     <%= yield %>
   </body>
 </html>
